@@ -1,0 +1,14 @@
+version: "3"
+services:
+  appli:
+    image: httpd:latest
+    volumes:
+      - ./website:/var/appliweb
+    ports: 
+      - "8000:80"
+    
+
+networks:
+  default:
+    external:
+      name: netapp
